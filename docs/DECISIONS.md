@@ -1,15 +1,18 @@
 # Decisions
 
-| ID | Status | Decision |
-|---|---|---|
-| D001 | Accepted from user brief | Human-reviewed drafts only; no filing or determination of crime |
-| D002 | Accepted from user brief | Synthetic case records, timeline, missing information and evidence references |
-| D003 | Proposed | 16-week, single-student schedule |
-| D004 | Proposed | Modular Python backend with a small TypeScript review interface |
-| D005 | Proposed | 120 scenario families split 60/20/40 with family isolation |
-| D006 | Pending | Confirm SAR versus India-specific STR terminology |
-| D007 | Pending | Confirm academic template, deadlines and expert reviewer access |
-| D008 | Pending | Select model/provider after pilot and approve spending ceiling |
-| D009 | Confirmed | Repository: https://github.com/sanath265/sar-drafting-assistant. User made it public and granted connector write access. |
+| ID   | Status                      | Decision                                                                                                                                                                                                                 |
+|------|-----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| D001 | Accepted from user brief    | Human-reviewed drafts only; no filing or determination of crime                                                                                                                                                          |
+| D002 | Accepted from user brief    | Synthetic case records, timeline, missing information and evidence references                                                                                                                                            |
+| D003 | Proposed                    | 16-week, single-student schedule at ~10–12 h/week; week-8 end-to-end demonstration doubles as the mid-semester evaluation; report writing starts in week 10; week 16 is buffer                                            |
+| D004 | Proposed                    | Modular Python backend with a small TypeScript review interface; Python-served UI fallback if the compute environment lacks Node/Docker                                                                                    |
+| D005 | Proposed (revised 2026-10-29) | 60 scenario families (six strata × 10, split 5/2/3) → 30 dev / 12 val / 18 test with family isolation; floor 48 (8 per stratum, 4/1/3 → 24/6/18). Supersedes 120 (60/20/40), which exceeded the annotation hours available |
+| D006 | Decided 2026-10-29          | SAR used as the generic term; the Indian STR under the PMLA rules is treated as equivalent; narrative template follows FinCEN/FFIEC who/what/when/where/why/how; no thresholds, deadlines or filing formats encoded       |
+| D007 | Pending                     | Confirm academic template, semester dates and reviewer access                                                                                                                                                            |
+| D008 | Pending                     | Select model/provider after pilot and approve spending ceiling                                                                                                                                                           |
+| D009 | Confirmed                   | Repository: [https://github.com/sanath265/sar-drafting-assistant](https://github.com/sanath265/sar-drafting-assistant). Private by policy (temporarily public during initial setup); connector write access granted        |
+| D010 | Decided 2026-10-29          | Development and demonstration on BITS Pilani-provided compute; LLM via provider API within the agreed budget, locally hosted open-weight model as fallback. Pending: confirm outbound API, container and web-server support in week 1 |
+| D011 | Decided 2026-10-29          | Evaluation scope: B0, B1 and P are required, B2 (basic RAG) is secondary, ablations optional; one generation per held-out case per system, with a fixed 10-case subset × 3 runs for variance; two reviewers rate 8–10 held-out drafts; no usability or time-and-motion study |
+| D012 | Decided 2026-10-29          | Reference list extended to 11 sources: attribution (Rashkin 2023), atomic factual precision (Min 2023), NLI consistency (Laban 2022), hallucination survey (Ji 2023), interpretability (Rudin 2019), PML Rules 2005       |
 
 Update this log when an assumption becomes a confirmed decision. Preserve the reason and date of substantive scope changes.
